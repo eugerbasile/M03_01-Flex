@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando con FlexBox</title>
+    <!--Agregamos link para enlazar con CSS-->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="padre">
+        <!--Creamos el header que es el fondo-->
+        <header class="header">
+            <!--Menu superior (Logo Izq- Nav Centro - Social Derecha)-->
+            <div class="menu">
+                <div class="logo"></div>
+                <nav class="nav"></nav>
+                <div class="social"></div>
+            </div>
+            <!--Texto principal abajo de Menu-->
+            <div class="texto-principal">
+                <h1></h1>
+            </div>
+        </header>
+        <!--Armamos otra caja saliendo del header con la seccion-->
+        <section class="section">
+            <!--Dentro de la seccion tenemos 4 articulos, creamos un div con sus 
+        articulos-->
+            <div class="articulos">
+                <article class="article"></article>
+                <article class="article"></article>
+                <article class="article"></article>
+                <article class="article"></article>
+                <!--Al final de los articulos, dentro de seccion hay otra navegacion -->
+                <nav class="navegacion"></nav>
+            </div>
+            <!--Dentro de seccion a la derecha tenemos un aside, salimos del div articulos y creamos el aside-->
+            <aside class="aside">
+                <div class="publicidad"></div>
+                <div class="publicidad"></div>
+            </aside>
+        </section>
+        <!--Creamos el footer al final -->
+        <footer class="footer">
+            <nav class="pie"></nav>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+/*Caracteristicas generales para todo el contenido*/
+* {
+  margin: 0px;
+  padding: 0px;
+  /*Border box es para que las cajas no se desborden unas con otras*/
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  /*Para sacarle el subrayado le ponemos el TEXT DECORATION NONE*/
+  text-decoration: none;
+}
+
+/*PADRE es primera categoria PADRE*/
+.padre {
+  display: flex;
+  /*FLEX-FLOW: Es una abrebietura de FLEX-DIRECTION Y FLEX-WRAP que juntas definen ejes horizontales y verticales */
+  flex-flow: column nowrap;
+}
+
+/*CREAMOS UN MARGEN INTERNO PARA TODO EL CONTENIDO DE LA WEB Y SE LO PONEMOS A TODOS LOS ELEMENTOS PADRES*/
+
+.margen-interno{
+    /*Cero de arriba y hacia abajo y de 50 px hacia los lados*/
+    padding: 0 50px;
+}
+
+/*HEADER es segunda categoria PADRE*/
+.header {
+  background: url(images/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg);
+  /*Los backgroun es para que la imagen este centrada, dentro del contenedor y cubre toda la etiqueta*/
+  background-position: center;
+  background-clip: contain;
+  background-size: cover;
+
+  display: flex;
+  flex-flow: column nowrap;
+  border-bottom: 10px solid white;
+}
+
+/*MENU es tercera categoria PADRE*/
+.menu {
+  background: white;
+  display: flex;
+  /*ROW para que se muestre en columnas NOWRAP para que se muestre todo en una misma linea
+  flex-flow: row nowrap;*/
+  height: 100px;
+  /*ALIGN-ITEMS es para poner en el centro los HIJOS*/
+  align-items: center;
+  /*border bottom es para ponerle una linea abajo del menu */
+}
+/*CONTENEDORES HIJOS
+  
+      FLEX es la abrbiatura de FLEX-GROW FLEX-SHRINK FLEX-BASIS*/
+.logo {
+  flex: 1 1 auto;
+}
+.logo img{
+    width: 100px;
+    height: auto;
+    margin: 30px 0 0 30px;
+}
+.nav {
+  /*Pongo 5 para que ocupe 5 veces mas del tamaño que el resto de las cajas*/
+  flex: 5 1 auto;
+}
+.nav a {
+  color: gray;
+
+  /*Tamaño del texto*/
+  font-size: 11px;
+  /*Si queremos que sean en letras mayusculas pondriamos 
+    text-transform: uppercase;*/
+  /*Padding es de 0 arriba y abajo y de 10 px hacia los lados*/
+  padding: 0 10px;
+  /*Para que se separen las letras entre ellas ponemos un letter spacing*/
+  letter-spacing: 2px;
+}
+.nav a:hover {
+  color: #000;
+}
+.social {
+  flex: 1 1 auto;
+  
+}
+
+.social a {
+  font-size: 18px;
+  padding:0 5px;
+  color: gray;
+  
+}
+.social a i{
+  margin: 20px 0px 15px 0px;
+
+}
+
+
+.texto-principal {
+  height: 200px;
+  align-items: center;
+  padding: 60px 20px;
+  
+}
+h1 {
+  /*usando rgb ponemos el color y al final pongo la transparencia que va*/
+  background: rgb(192, 192, 192, 0.5);
+  padding: 40px 0px;
+ 
+ 
+  color: rgba(255, 96, 96, 0.692);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+  /*Es el peso de la fuente, 700 es negrita*/
+  font-weight: 700;
+  /*altura de las lineas de las letras*/
+  line-height: 1.6;
+}
+
+/*SECTION categoria PADRE*/
+.section {
+  background: white;
+  display: flex;
+}
+.articulos {
+  background: white;
+  flex: 2 1 auto;
+  display: flex;
+  /*Propiedad WRAP si no alcanza uno al lado del otro pasa AUTOMATICAMENTE ABAJO*/
+  flex-flow: row wrap;
+}
+.article {
+  background:  #E8EAE6;
+  /*Un flex de 45% para que comparta el espacio con el articulo de al lado*/
+  flex: 1 1 45%;
+  font-size:13px;
+  letter-spacing: 1px;
+  margin: 10px 10px 0 0px;
+
+  border-style: solid;
+  border-color: gainsboro;
+  border-width: 5px;
+}
+.article img{
+    width: 100%;
+    height: 300px;
+}
+.article a{
+    padding: 20px 0px;
+    font-weight: 700;
+    color: rgb(170, 167, 167);
+    margin: 10px 0;
+    /*Para que se muestre como bloque*/
+    display: inline-block;
+}
+
+.article a:hover{
+    color: #000;
+}
+/*Etiqueta fecha*/
+h3{
+    color: white;
+    font-size: 13px;
+    padding: 10px 0;
+    margin-top: -80px;
+    margin-left: 10px;
+}
+
+h2{
+    background:  #FF616D;
+    width: 590px;
+   
+    
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px;
+   
+    font-weight: 300;
+    display: inline-block;
+
+}
+.navegacion {
+  background:  #E8EAE6;
+  /*En vez de AUTO ponemos el 100% para que ocupe todo el ancho*/
+  flex: 1 1 100%;
+
+}
+.aside {
+  background:  #E8EAE6;
+  flex: 1 1 auto;
+ 
+}
+
+.aside img{
+    width: 100%;
+}
+h4{
+    background:white ;
+    color: black;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.publicidad {
+  background:  #E8EAE6;
+}
+.footer {
+  background: white;
+}
+.pie {
+  background:  rgba(255, 96, 96);
+  flex: 1 1 100%;
+  text-align: center;
+}
+/*Pongo las medidas maximas de PX para que se adapte a la pantalla de Tablet*/
+@media all and (max-width: 800px) {
+  .section {
+    flex-direction: column;
+    background-color: #9ede73;
+  }
+}
+/*Ponemos las medidas minimas para que la seccion, y la navegacion se muestre en columna para el tamaño de los MOVILES*/
+@media all and (max-width: 600px) {
+  .section {
+    flex-direction: column;
+  }
+  .articulos {
+    flex-direction: column;
+  }
+  .menu {
+    flex-direction: column;
+    height: auto;
+    flex-basis: content;
+  }
+  .logo .nav .social {
+    width: 100px;
+  }
+
+  .aside {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

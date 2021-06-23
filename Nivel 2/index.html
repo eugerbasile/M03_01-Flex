@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando con FlexBox</title>
+    <!--Agregamos link para enlazar con CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="padre">
+        <!--Creamos el header que es el fondo-->
+        <header class="header margen-interno">
+            <!--Menu superior (Logo Izq- Nav Centro - Social Derecha)-->
+            <div class="menu">
+                <div class="logo">
+                    <!--Hago una etiqueta a con el enlace index para que cuando la cliqueemos nos lleva al inicio-->
+                    <a href="index.html"><img src="images/Material activitat Flex nivell 2-logo.png" alt="Japon"></a>
+                </div>
+                <nav class="nav">
+                    <!--A cada etiqueta le ponemos el logo que queremos, sacando de la pagina de font awesome-->
+                    <ul>
+                        <a href="#"><i class="fa fa-home"></i> Inicio </a>
+                        <a href="#"><i class="fa fa-map-marked-alt"></i> Rutas </a>
+                        <a href="#"><i class="fa fa-concierge-bell"></i> Hoteles </a>
+                        <a href="#"><i class="fa fa-plane"></i> Vuelos </a>
+                        <a href="#"><i class="fa fa-envelope"></i>Contacto </a>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <div><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                    <div><a href="#"><i class="fab fa-twitter"></i></a></div>
+                </div>
+            </div>
+            <!--Texto principal abajo de Menu-->
+            <div class="texto-principal">
+                <h1><strong>"Disfruta de la experiencia de otros viajeros"</strong></h1>
+            </div>
+        </header>
+        <!--Armamos otra caja saliendo del header con la seccion-->
+        <section class="section margen-interno">
+            <!--Dentro de la seccion tenemos 4 articulos, creamos un div con sus 
+        articulos-->
+            <div class="articulos">
+                <article class="article">
+                    <img src="images/articulo-1.jpg" alt="">
+                    <h3>5 de Marzo del 2019</h3>
+                    <h2><strong>CULTURA</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sunt at quas! Natus blanditiis
+                        odit harum laudantium culpa consectetur alias?</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="article">
+                    <img src="images/articulo-2.jpg" alt="">
+                    <h3>5 de Marzo del 2019</h3>
+                    <h2><strong>CULTURA</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sunt at quas! Natus blanditiis
+                        odit harum laudantium culpa consectetur alias?</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="article">
+                    <img src="images/articulo-3.jpg" alt="">
+                    <h3>5 de Marzo del 2019</h3>
+                    <h2><strong>CULTURA</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sunt at quas! Natus blanditiis
+                        odit harum laudantium culpa consectetur alias?</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <article class="article">
+                    <img src="images/articulo-4.jpg" alt="">
+                    <h3>5 de Marzo del 2019</h3>
+                    <h2><strong>CULTURA</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sunt at quas! Natus blanditiis
+                        odit harum laudantium culpa consectetur alias?</p>
+                    <a href="#">Leer más...</a>
+                </article>
+                <!--Al final de los articulos, dentro de seccion hay otra navegacion -->
+                <nav class="navegacion"></nav>
+            </div>
+            <!--Dentro de seccion a la derecha tenemos un aside, salimos del div articulos y creamos el aside-->
+            <aside class="aside">
+                <div class="publicidad">
+                    <h4>Aside</h4>
+                    <img src="images/aside-1.jpg" alt="">
+                </div>
+                <div class="publicidad">
+                    <h4>Aside</h4>
+                    <img src="images/aside-2.jpg" alt="">
+                </div>
+            </aside>
+        </section>
+        <!--Creamos el footer al final -->
+        <footer class="footer margen-interno">
+            <nav class="pie">
+                <a href="#">Desarrollado por Uge Rodriguez Basile</a>
+            </nav>
+        </footer>
+    </div>
+
+</body>
+
+</html>

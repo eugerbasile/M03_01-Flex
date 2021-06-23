@@ -1,0 +1,131 @@
+/*Caracteristicas generales para todo el contenido*/
+* {
+  margin: 10px;
+  padding: 10px;
+  /*Border box es para que las cajas no se desborden unas con otras*/
+  box-sizing: border-box;
+}
+
+/*PADRE es primera categoria PADRE*/
+.padre{
+    display:flex;
+    /*FLEX-FLOW: Es una abrebietura de FLEX-DIRECTION Y FLEX-WRAP que juntas definen ejes horizontales y verticales */
+    flex-flow: column nowrap;
+}
+
+
+
+/*HEADER es segunda categoria PADRE*/
+.header {
+  background: #000;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+/*MENU es tercera categoria PADRE*/
+    .menu{
+        background: #233E8B;
+        display: flex;
+        /*ROW para que se muestre en columnas NOWRAP para que se muestre todo en una misma linea*/
+        flex-flow: row nowrap;
+        height: 100px;
+        /*ALIGN-ITEMS es para poner en el centro los HIJOS*/
+        align-items: center;
+    }
+    /*CONTENEDORES HIJOS
+
+    FLEX es la abrbiatura de FLEX-GROW FLEX-SHRINK FLEX-BASIS*/
+        .logo{
+            background: #1EAE98;
+            flex: 1 1 auto;
+            height: 30px;
+        }
+        .nav{
+            background: #1EAE98;
+            /*Pongo 5 para que ocupe 5 veces mas del tamaño que el resto de las cajas*/
+            flex: 5 1 auto;
+            height: 30px;
+        }
+        .social{
+            background: #1EAE98;
+            flex: 1 1 auto;
+            height: 30px;
+        }
+
+        .texto-principal{
+            background: #A9F1DF;
+        }
+            h1{
+                background: #FFFFC7;
+            }
+
+            /*SECTION categoria PADRE*/
+.section {
+  background: #000;
+  display: flex;
+}
+    .articulos{
+        background: #F6B8B8;
+        flex: 2 1 auto;
+        display: flex;
+        /*Propiedad WRAP si no alcanza uno al lado del otro pasa AUTOMATICAMENTE ABAJO*/
+        flex-flow: row wrap;
+    }
+        .article{
+            background: #AC66CC;
+            flex: 1 1 40%;
+        }
+        .navegacion{
+            background: #C490E4;
+            /*En vez de AUTO ponemos el 100% para que ocupe todo el ancho*/
+            flex: 1 1 100%;
+        }
+    .aside{
+        background: #00EAD3;
+        flex: 1 1 auto;
+    }
+        .publicidad{
+            background: #FF449F;
+        }
+.footer {
+  background: #000;
+}
+    .pie{
+        background: #3EDBF0;
+        flex: 1 1 100%;
+    }
+/*Pongo las medidas maximas de PX para que se adapte a la pantalla de Tablet*/
+@media all and (max-width: 800px){
+    .section{
+        flex-direction: column;
+        background-color: #9EDE73;
+    }
+ 
+    
+}
+/*Ponemos las medidas minimas para que la seccion, y la navegacion se muestre en columna para el tamaño de los MOVILES*/
+@media all and (max-width: 600px){
+    .section{
+        flex-direction: column;
+    }
+    .articulos{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+        flex-basis: content;
+    }
+    .logo .nav .social{
+        width: 100px;
+    }
+   
+    .aside{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+}
+
