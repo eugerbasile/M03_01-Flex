@@ -117,8 +117,15 @@
         height: auto;
         flex-basis: content;
     }
-    .logo .nav .social{
-        width: 100px;
+    .logo {
+        
+        width: 90%;
+    }
+    .nav{
+        width: 90%;
+    }
+    .social{
+        width: 90%;
     }
    
     .aside{
